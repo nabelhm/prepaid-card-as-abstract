@@ -13,6 +13,11 @@ class Card
     const STATUS_UTILIZED = 3;
 
     /**
+     * @var Category
+     */
+    private $category;
+
+    /**
      * @var string
      */
     private $code;
@@ -22,14 +27,25 @@ class Card
      */
     private $status;
 
-    /**
-     * @var Category
-     */
-    private $category;
-
     public function __construct()
     {
         $this->status = self::STATUS_NEW;
+    }
+
+    /**
+     * @param Category $category
+     */
+    public function setCategory(Category $category)
+    {
+        $this->category = $category;
+    }
+
+    /**
+     * @return Category
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 
     /**
@@ -62,21 +78,5 @@ class Card
     public function getStatus()
     {
         return $this->status;
-    }
-
-    /**
-     * @param Category $category
-     */
-    public function setCategory(Category $category)
-    {
-        $this->category = $category;
-    }
-
-    /**
-     * @return Category
-     */
-    public function getCategory()
-    {
-        return $this->category;
     }
 }
