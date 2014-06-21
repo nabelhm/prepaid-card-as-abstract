@@ -7,8 +7,8 @@ This library provides an abstraction for prepaid card concepts.
 
 Prepaid cards are grouped into categories.
 
-A category has a strid property to identify it and a description.
-It has a cost and an utility, both properties represented in money.
+A category has a strid (string id) property to identify it and a description.
+It has a cost and an utility, both properties represented in money format.
 
 You need to create your manager implementing `CategoryManagerInterface`.
 
@@ -26,16 +26,16 @@ $category->setUtility(new Money(10, $currency));
 $manager->add($category);
 
 // Picks a category using an array of criteria
-$currency = $manager->pick(array('strid' => '10p'));
+$category = $manager->pick(array('strid' => '10p'));
 
 // Picks a category using a strid directly
-$currency = $manager->pick('10p');
+$category = $manager->pick('10p');
 
 // Removes a category
 $manager->remove($category);
 
 // Collects categories
-$currencies = $manager->collect();
+$categories = $manager->collect();
 ```
 
 ## Card
