@@ -12,7 +12,8 @@ use Cubalider\Component\PrepaidCard\Model\Card;
 interface CardManagerInterface
 {
     /**
-     * Fetches given amount of cards, of given category.
+     * Fetches given amount of new cards, of given category.
+     * It marks cards as fetched, so they are not fetched again.
      *
      * @api
      * @param Category $category
@@ -22,7 +23,8 @@ interface CardManagerInterface
     public function fetch(Category $category, $amount = 1);
 
     /**
-     * Utilizes a card.
+     * Marks a card as utilized.
+     * Card can't be used again.
      * It returns the card's utility.
      *
      * @api
