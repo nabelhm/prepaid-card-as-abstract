@@ -19,10 +19,11 @@ interface CategoryManagerInterface
     public function add(Category $category);
 
     /**
-     * Picks a category using given criteria
+     * Picks a category using given criteria.
+     * Criteria can be also a category strid.
      *
      * @api
-     * @param mixed $criteria
+     * @param array|string $criteria
      * @return Category The category
      */
     public function pick($criteria);
