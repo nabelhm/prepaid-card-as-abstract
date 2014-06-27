@@ -19,6 +19,15 @@ interface CategoryManagerInterface
     public function add(Category $category);
 
     /**
+     * Updates given category.
+     *
+     * @api
+     * @param Category $category
+     * @return void
+     */
+    public function update(Category $category);
+
+    /**
      * Picks a category using given criteria.
      * Criteria can be also a category strid.
      *
