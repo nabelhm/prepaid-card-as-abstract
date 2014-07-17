@@ -23,7 +23,7 @@ class Card
     private $code;
 
     /**
-     * @var integer
+     * @var int
      */
     private $status;
 

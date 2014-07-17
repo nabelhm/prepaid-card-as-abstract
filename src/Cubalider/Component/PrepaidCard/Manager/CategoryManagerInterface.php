@@ -13,8 +13,8 @@ interface CategoryManagerInterface
      * Adds given category.
      *
      * @api
+     *
      * @param Category $category
-     * @return void
      */
     public function add(Category $category);
 
@@ -22,8 +22,8 @@ interface CategoryManagerInterface
      * Updates given category.
      *
      * @api
+     *
      * @param Category $category
-     * @return void
      */
     public function update(Category $category);
 
@@ -32,7 +32,9 @@ interface CategoryManagerInterface
      * Criteria can be also a category strid.
      *
      * @api
+     *
      * @param array|string $criteria
+     *
      * @return Category The category
      */
     public function pick($criteria);
@@ -41,6 +43,7 @@ interface CategoryManagerInterface
      * Gets all categories.
      *
      * @api
+     *
      * @return Category[]
      */
     public function collect();
@@ -49,8 +52,8 @@ interface CategoryManagerInterface
      * Removes given category.
      *
      * @api
+     *
      * @param Category $category
-     * @return void
      */
     public function remove(Category $category);
 }

@@ -16,8 +16,10 @@ interface CardManagerInterface
      * It marks cards as fetched, so they are not fetched again.
      *
      * @api
+     *
      * @param Category $category
      * @param integer $amount
+     *
      * @return Card[]
      */
     public function fetch(Category $category, $amount = 1);
@@ -28,7 +30,9 @@ interface CardManagerInterface
      * It returns the card's utility.
      *
      * @api
+     *
      * @param Card $card
+     *
      * @return Money
      */
     public function utilize(Card $card);
